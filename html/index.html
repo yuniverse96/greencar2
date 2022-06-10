@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/jquery.fullpage.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.fullpage.js"></script>
+  
+ 
+    <title>그린카 클론</title>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="nav">
+                <div class="logo">
+                    <a href="http://www.greencar.co.kr/"><span>그린카</span></a>
+                </div>
+                <div class="menu">
+                    <div class="tabs">
+                        <ul>
+                            <li class="tab_box">
+                                <a>그린카 소개</a>
+                                <ul>
+                                    <li>
+                                        <a>그린카란?</a>
+                                    </li>
+                                    <li>
+                                        <a>이용안내</a>
+                                    </li>
+                                    <li>
+                                        <a>요금안내</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="tab_box">
+                                <a>서비스</a>
+                                <ul>
+                                    <li>
+                                        <a>법인 / 단체</a>
+                                    </li>
+                                    <li>
+                                        <a>편도서비스</a>
+                                    </li>
+                                    <li>
+                                        <a>나눔카서비스</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="tab_box">
+                                <a>이벤트 / 쿠폰</a> 
+                                <ul>
+                                    <li>
+                                        <a>쿠폰받기</a>
+                                    </li>
+                                    <li>
+                                        <a>이벤트</a>
+                                    </li>
+                                    <li>
+                                        <a>제휴혜택</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="tab_box">
+                                <a>고객센터</a> 
+                                <ul>
+                                    <li>
+                                        <a>자주찾는질문</a>
+                                    </li>
+                                    <li>
+                                        <a>1:1문의</a>
+                                    </li>
+                                    <li>
+                                        <a>공지사항</a>
+                                    </li>
+                                    <li>
+                                        <a>그린존신청</a>
+                                    </li>
+                                    <li>
+                                        <a>제휴안내</a>
+                                    </li>
+                                    <li>
+                                        <a>온라인서류제출</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lojo">
+                    <div class="login">로그인</div>
+                    <div class="dot">.</div>
+                    <div class="join">회원가입</div>
+                </div>
+            </div>
+            <div class="nav_submenu"></div>
+        </div>
+        <!--header-->
+
+        <div id="fullpage">
+            <div class="section active">
+                <div class="video_wrap">
+                    <div class="main_video">
+                        <div class="load_img"></div>
+                        <div id="player"></div>
+                        <div id="btn-scroll">
+                            <div>
+                                <span class="down-arrow-1"></span>
+                                <span class="down-arrow-2"></span>
+                             </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">가까운 그린존</div>
+            <div class="section">경제적인 요금/쿠폰</div>
+            <div class="section">간편한 앱</div>
+            <div class="section">그린카 이용안내</div>
+            <div class="section test">이벤트</div>
+            <div class="section test">공지사항</div>
+        </div>
+        
+    </div>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script>
+    //api호출
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+
+
+    var player;
+    function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+        videoId: 'S67ED_rAzuA',
+        playerVars: {
+            'autoplay' : 1,
+            'controls' : 0,
+            'loop' : 1,
+            'playlist' : 'S67ED_rAzuA',
+            'rel' : 0,
+            'mute' : 1,
+            'modestbranding' : 1
+        },
+        events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+        }
+    });
+    }
+
+    function onPlayerReady(event) {
+        $(".load_img").removeClass("hidden");
+    }
+
+    
+    //API는 플레이어의 상태가 변경 될 때이 함수를 호출합니다.
+    var done = false;
+    function onPlayerStateChange(event) {
+        var state = event.target.getVideoLoadedFraction();
+		
+		if(state > 0) {
+            setTimeout(hiddenImg, 1500);
+			event.target.playVideo();
+		}
+		if(state <= 0) { //버퍼링
+			$('.load_img').removeClass('hidden');
+		}
+
+    }
+    function stopVideo() {
+        $('.load_img').removeClass('hidden');
+    }
+
+    function hiddenImg() {
+        $(".load_img").addClass("hidden");
+    }
+
+
+    </script>
+
+</body>
+</html>
