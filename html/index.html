@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <link rel="stylesheet" type="text/css" href="../css/jquery.fullpage.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
     <script type="text/javascript" src="../js/jquery.fullpage.js"></script>
   
  
@@ -117,20 +118,18 @@
                 </div>
             </div>
             <!--가까운그린존-->
-            <div id="green_zoon" class="section" style="background-attachment: fixed;">
-                <h2>가까운 그린존</h2>
+            <div id="green_zoon" class="section">
                 <div class="wrap_box">
                     <div class="text_box">
-                        <section class="top">
+                       <div class="top">
                             <div class="top_icon"></div>
                             <h3>내주위 3분거리</h3>
                             <h3>가까운 그린존에서</h3>
-                        </section>
-                        <section class="bottom">
+                       </div>
+                       <div class="bottom">
                             <p>차를 빌리고 반납하기 위해 먼 곳까지 찾아가셨나요?</p>
                             <p>그린카는 회사, 집, 학교, 내 주위 3분 거리 어디에나 있습니다.</p>
-                        </section>
-                       
+                       </div> 
                     </div>
 
                     <div class="phone_wrap">
@@ -139,73 +138,88 @@
                     </div>
                 </div>
             </div>
-            <div class="section">경제적인 요금/쿠폰</div>
-            <div class="section">간편한 앱</div>
+            <!--경제적인 요금 쿠폰-->
+            <div id="coupone" class="section">
+                <div class="wrap_box">
+                    <div class="phone_wrap">
+                        <div class="phone"></div>
+                        <div class="inner_img"></div>
+                    </div>
+                    <div class="text_box">
+                        <div class="top">
+                            <div class="top_icon"></div>
+                            <h3>필요한 시간만큼</h3>
+                            <h3>경제적으로</h3>
+                        </div>
+                        <div class="bottom">
+                            <p>1시간 단위로 차를 빌리셨다구요?</p>
+                            <p>그린카는 30분부터 10분 단위로 차가 필요한 시간만큼</p>
+                            <p>이용하는 합리적인 서비스입니다.</p>
+                            <div class="btns">
+                                <div class="pay">
+                                    <button type="button">
+                                        <p>요금안내</p><span class="go"></span>
+                                    </button>
+                                </div>
+                                <div class="get">
+                                    <button type="button">
+                                        <p>쿠폰받기</p><span class="go"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div> 
+                     </div>
+
+                </div>
+            </div>
+            <!--간편한 앱-->
+            <div id="easy_app" class="section">
+                <div class="wrap_box">
+                    <div class="text_box">
+                        <div class="top">
+                            <div class="top_icon"></div>
+                            <h3>필요한 시간만큼</h3>
+                            <h3>경제적으로</h3>
+                        </div>
+                        <div class="bottom">
+                            <p>자동차 키를 따로 챙기셨나요?</p>
+                            <p>예약부터 차량이용까지!</p>
+                            <p>그린카 앱 하나로 충분합니다.</p>
+                            <div class="btns">
+                                <div class="apple">
+                                    <button type="button">
+                                        <div class="icon"></div>
+                                        <div class="txt">
+                                            <h5>Download on the</h5>
+                                            <p>APP STORE</p>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="google">
+                                    <button type="button">
+                                        <div class="icon"></div>
+                                        <div class="txt">
+                                            <h5>Get in on</h5>
+                                            <p>Google Play</p>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="phone_wrap">
+                        <div class="phone"></div>
+                    </div>
+
+                </div>
+            </div>
             <div class="section">그린카 이용안내</div>
             <div class="section test">이벤트</div>
             <div class="section test">공지사항</div>
         </div>
         
     </div>
-    <script type="text/javascript" src="../js/common.js"></script>
-    <!-- <script>
-    //api호출
-    var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-
-
-    var player;
-    function onYouTubeIframeAPIReady() {
-    player = new YT.Player('player', {
-        videoId: 'S67ED_rAzuA',
-        playerVars: {
-            'autoplay' : 1,
-            'controls' : 0,
-            'loop' : 1,
-            'playlist' : 'S67ED_rAzuA',
-            'rel' : 0,
-            'mute' : 1,
-            'modestbranding' : 1
-        },
-        events: {
-        'onReady': onPlayerReady,
-        'onStateChange': onPlayerStateChange
-        }
-    });
-    }
-
-    function onPlayerReady(event) {
-        $(".load_img").removeClass("hidden");
-    }
-
-    
-    //API는 플레이어의 상태가 변경 될 때이 함수를 호출합니다.
-    var done = false;
-    function onPlayerStateChange(event) {
-        var state = event.target.getVideoLoadedFraction();
-		
-		if(state > 0) {
-            setTimeout(hiddenImg, 1500);
-			event.target.playVideo();
-		}
-		if(state <= 0) { //버퍼링
-			$('.load_img').removeClass('hidden');
-		}
-
-    }
-    function stopVideo() {
-        $('.load_img').removeClass('hidden');
-    }
-
-    function hiddenImg() {
-        $(".load_img").addClass("hidden");
-    }
-
-
-    </script> -->
-
+   
 </body>
 </html>

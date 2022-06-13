@@ -146,16 +146,16 @@
 /*2022.06.13 추가 완료*/
 .video_wrap {width: 100vw; height: 100vh; position: relative;}
 .video_wrap .main_video {width: 100%; height: 100%; min-width: 1080px; position: absolute; top: 0; left: 0; z-index: 30; overflow: hidden;}
-.video_wrap .main_video .load_img {width: 100%; height: 100%; position: absolute; background-color: #000; z-index: 20; background: url(../images/bg_visual.png) no-repeat 0 0; background-size: 100%; background-position-y: -10px; transition: .3s ease-in;}
+.video_wrap .main_video .load_img {width: 100%; height: 100%; position: absolute; background-color: #000; z-index: 300; background: url(../images/bg_visual.png) no-repeat 0 0; background-size: 100%; background-position-y: -10px; transition: .3s ease-in;}
 .video_wrap .main_video .load_img.hidden {opacity: 0;}
 
-.video_wrap .main_video #player {position: absolute; background-color: #fff; width: 100%; height: 120%; border: 0; top: 45%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; }
+.video_wrap .main_video #player {position: absolute; background-color: #fff; width: 100%; height: 120%; border: 0; top: 45%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; z-index: 0; }
 
 
 
 /*스크롤 다운 애니메이션*/
 
-#btn-scroll{ position: absolute; bottom: 10px; left: 50%; width: 20px; height: auto; z-index: 100; }
+#btn-scroll{ position: absolute; bottom: 10px; left: 50%; width: 20px; height: auto; z-index: 500; }
 #btn-scroll span{ display: block; width: 10px; height: 10px; -ms-transform: rotate(45deg);  -webkit-transform: rotate(45deg); transform: rotate(45deg); transform: rotate(45deg); border-right: 3px solid #fff; border-bottom: 3px solid #fff; margin: 0 0 3px 5px; }
 #btn-scroll .down-arrow-1 { margin-top: 6px; }
 #btn-scroll .down-arrow-1, #btn-scroll .down-arrow-2{ -webkit-animation: mouse-scroll 1s infinite; -moz-animation: mouse-scroll 1s infinite:}
@@ -189,15 +189,90 @@
 
 #fullpage .section h2 { display: none;}
 #fullpage .section { background-attachment: fixed !important;}
+
 /*가까운 그린존*/
 #green_zoon {width: 100%; min-width: 1080px; height: 100vh; background: url(../images/bg_section01.jpeg) no-repeat 0 0; background-size: cover; background-position: center;}
-#green_zoon .wrap_box {width: 1080px; height: 100%; margin: 0 auto; padding: 100px 30px; display: flex; justify-content: space-between;}
-#green_zoon .wrap_box .text_box {width: 100%; height: 100%; display: flex; flex-direction: column; padding: 30px 0; gap: 50px;}
-#green_zoon .wrap_box .text_box .top {width: 100%; margin-bottom: 30px;}
+#green_zoon .wrap_box {width: 1080px; height: 100%; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;}
+#green_zoon .wrap_box .text_box {width: 100%; height: 634px;; margin-left: 40px; display: flex; flex-direction: column; padding: 30px 0; gap: 40px;}
+#green_zoon .wrap_box .text_box .top {width: 100%; height: 50%;}
 #green_zoon .wrap_box .text_box .top .top_icon {width: 47px; height: 60px; background: url(../images/sp_main.png) no-repeat; background-position: 0 -174px; margin-bottom: 20px;} 
 #green_zoon .wrap_box .text_box .top h3 {font-size: 3.5rem; line-height: 5rem; font-weight: 500;}
 #green_zoon .wrap_box .text_box .bottom {width: 100%;}
 #green_zoon .wrap_box .text_box .bottom p {font-size: 1.5rem; line-height: 2.3rem;}
+
+#green_zoon .wrap_box .phone_wrap { width: auto; height: 634px; position: relative;}
+#green_zoon .wrap_box .phone_wrap .phone {width: 411px; height: 634px; background: url(../images/bg_phone.png) no-repeat 0 0;}
+#green_zoon .wrap_box .phone_wrap .inner_img {width: 283px; height: 486px; position: absolute;  background: url(../images/img_section01.gif) no-repeat 0 0; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+
+
+
+/*경제적인 요금쿠폰*/
+#coupone {width: 100%; min-width: 1080px; height: 100vh; background: url(../images/bg_section02.jpeg) no-repeat 0 0; background-size: cover; background-position: center;}
+#coupone .wrap_box {width: 1080px; height: 100%; margin: 0 auto; padding: 0; display: flex; justify-content: space-between; align-items: center;}
+#coupone .wrap_box .text_box {width: 100%; height: 634px; margin-left: 40px; display: flex; flex-direction: column; padding: 30px 0; gap: 40px;}
+#coupone .wrap_box .text_box .top {width: 100%; height: 50%;}
+#coupone .wrap_box .text_box .top .top_icon {width: 50px; height: 60px; background: url(../images/sp_main.png) no-repeat; background-position: -56px -174px; margin-bottom: 20px;} 
+#coupone .wrap_box .text_box .top h3 {font-size: 3.5rem; line-height: 5rem; font-weight: 500;}
+#coupone .wrap_box .text_box .bottom {width: 100%;}
+#coupone .wrap_box .text_box .bottom p {font-size: 1.5rem; line-height: 2.3rem;}
+
+#coupone .wrap_box .text_box .bottom .btns {width: 100%; height: 60px; display: flex; gap: 10px; margin-top: 50px; } 
+#coupone .wrap_box .text_box .bottom .btns div {height: 100%; padding: 0 30px; border: 2px solid #fff; transition: .3s ease-in;}
+#coupone .wrap_box .text_box .bottom .btns div button {width: 100%; height: 100%; font-size: 1.5rem; line-height: 3rem; color: #fff; font-weight: 500;}
+#coupone .wrap_box .text_box .bottom .btns div button p,
+#coupone .wrap_box .text_box .bottom .btns div button .go{display: inline-block;}
+#coupone .wrap_box .text_box .bottom .btns div button .go {width: 8px; height: 14px; background: url(../images/sp_main.png) no-repeat -292px 0; margin-left: 40px;}
+
+#coupone .wrap_box .text_box .bottom .btns div:hover {  background-color: #fff;}
+#coupone .wrap_box .text_box .bottom .btns div:hover button p { color: #04ccb1;}
+#coupone .wrap_box .text_box .bottom .btns div:hover button .go {width: 8px; height: 14px; background: url(../images/sp_main.png) no-repeat -256px 0; margin-left: 40px;}
+
+
+#coupone .wrap_box .phone_wrap { width: auto; height: 643px; position: relative;}
+#coupone .wrap_box .phone_wrap .phone {width: 411px; height: 634px; background: url(../images/bg_phone.png) no-repeat 0 0;}
+#coupone .wrap_box .phone_wrap .inner_img {width: 283px; height: 486px; position: absolute;  background: url(../images/img_section02.gif) no-repeat 0 0; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+
+
+
+/*간편한 앱*/
+#easy_app {width: 100%; min-width: 1080px; height: 100vh; background: url(../images/bg_section03.jpeg) no-repeat 0 0; background-size: cover; background-position: center;}
+#easy_app .wrap_box {width: 1080px; height: 100%; margin: 0 auto; padding: 0; display: flex; justify-content: space-between; align-items: center;}
+#easy_app .wrap_box .text_box{width: 100%; height: 634px; margin-left: 40px; display: flex; flex-direction: column; padding: 30px 0; gap: 40px;}
+#easy_app .wrap_box .text_box .top {width: 100%; height: 50%;}
+#easy_app .wrap_box .text_box .top .top_icon {width: 39px; height: 64px; background: url(../images/sp_main.png) no-repeat; background-position: -116px -174px; margin-bottom: 20px;} 
+#easy_app .wrap_box .text_box .top h3 {font-size: 3.5rem; line-height: 5rem; font-weight: 500;}
+#easy_app .wrap_box .text_box .bottom {width: 100%;}
+#easy_app .wrap_box .text_box .bottom > p {font-size: 1.5rem; line-height: 2.3rem;}
+
+#easy_app .wrap_box .text_box .bottom .btns {width: 100%; height: 70px; display: flex; gap: 10px; margin-top: 50px; } 
+#easy_app .wrap_box .text_box .bottom .btns > div {height: 100%; padding: 0 20px; border: 2px solid #fff; transition: .3s ease-in;}
+#easy_app .wrap_box .text_box .bottom .btns div button {width: 100%; height: 100%;}
+#easy_app .wrap_box .text_box .bottom .btns div button div {text-align: left; color: #fff; display: inline-block;}
+#easy_app .wrap_box .text_box .bottom .btns div button div h5 {font-size: 0.9rem; font-weight: 400; line-height: 1rem; margin-bottom: 3px;}
+#easy_app .wrap_box .text_box .bottom .btns div button div p {font-size: 1.5rem; font-weight: 400; line-height: 1.5rem;}
+/*애플아이콘*/
+#easy_app .wrap_box .text_box .bottom .btns .apple button .icon {width: 28px; height: 32px; margin-right: 10px; background: url(../images/sp_main.png) no-repeat; background-position: -76px -248px;}
+#easy_app .wrap_box .text_box .bottom .btns .apple:hover button .icon {background: url(../images/sp_main.png) no-repeat; background-position: -114px -248px;}
+
+/*구글아이콘*/
+#easy_app .wrap_box .text_box .bottom .btns .google button .icon {width: 28px; height: 32px; margin-right: 10px; background: url(../images/sp_main.png) no-repeat; background-position: 0 -248px;}
+#easy_app .wrap_box .text_box .bottom .btns .google:hover button .icon {background: url(../images/sp_main.png) no-repeat; background-position: -38px -248px;}
+
+
+#easy_app .wrap_box .text_box .bottom .btns > div:hover {  background-color: #fff;}
+#easy_app .wrap_box .text_box .bottom .btns > div:hover button .txt { color: #6104cc;}
+
+#easy_app .wrap_box .phone_wrap { width: auto; height: 680px; position: relative;}
+#easy_app .wrap_box .phone_wrap .phone {width: 610px; height: 680px; background: url(../images/img_section03.png) no-repeat 0 0;}
+
+
+
+
+
+
+
+
+
 
 
 

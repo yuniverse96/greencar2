@@ -42,7 +42,7 @@ function onPlayerStateChange(event) {
 					event.data == YT.PlayerState.CUED ? "재생준비 완료됨":
 					event.data == -1 ? "시작되지 않음" : "예외";
 
-					console.log('onPlayerStateChange 실행: ' + playerState);
+					//console.log('onPlayerStateChange 실행: ' + playerState);
 
 
 	var state = player.getPlayerState();
@@ -51,12 +51,8 @@ function onPlayerStateChange(event) {
 		setTimeout(hiddenImg, 1500);
 	}else{ //재생중이 아닌 모든상태
 		openImg();
+		player.seekTo(0);
 	}
-
-	if(state == 2) {
-		$(".ytp-scroll-min.ytp-pause-overlay").hide();
-	}
-
 
 }
 
