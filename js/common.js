@@ -86,6 +86,26 @@ $(document).ready(function() {
 				$("#header").addClass("white");
 			}else{
 				$("#header").removeClass("white");
+			};
+
+		
+			//이벤트 페이지 목록 이벤트
+			if(index == 6){
+				var item = document.querySelectorAll('#event_list ul li');
+				var cnt = 0; 
+
+				function activeFunc(){
+					item[cnt].classList.add('active');
+					cnt++;    
+					if(cnt >= item.length){
+						clearInterval(addActive);
+					}
+				}
+				var addActive = setInterval(activeFunc, 30);
+
+			}else{
+				$("#event_list ul li").removeClass("active");
+
 			}
 
 		},
@@ -101,6 +121,8 @@ $(document).ready(function() {
 				player.pauseVideo();
 
 			}
+
+			
 			
 		}	
 	});
@@ -125,7 +147,10 @@ $(document).ready(function() {
 	  $('#page_wrap .pagenation ul li').click(function(){
 		  var pageIndex = $(this).index();
 		  swiper.slideTo(pageIndex + 1);
-	  })
+	  });
+
+
+
 
 	
 
