@@ -105,6 +105,27 @@ $(document).ready(function() {
 		}	
 	});
 
+	var swiper = new Swiper(".greenSwiper", {
+		spaceBetween: 30,
+		effect: "fade",
+		loop: true,
+		autoplay: {
+		  delay: 4000,
+		  disableOnInteraction: false,
+		  },
+		  on: {
+			  slideChange: function () {
+				  //console.log(this.realIndex);
+				  $("#page_wrap .pagenation ul li").removeClass("active");
+				  $('#page_wrap .pagenation ul li').eq(this.realIndex).addClass("active")
+			  }
+		  }
+	  });
+
+	  $('#page_wrap .pagenation ul li').click(function(){
+		  var pageIndex = $(this).index();
+		  swiper.slideTo(pageIndex + 1);
+	  })
 
 	
 

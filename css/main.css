@@ -266,12 +266,65 @@
 #easy_app .wrap_box .phone_wrap .phone {width: 610px; height: 680px; background: url(../images/img_section03.png) no-repeat 0 0;}
 
 
+#howto_use {width: 100%; min-width: 1080px; height: 100vh;}
+#howto_use .greenSwiper {width: 100%; height: 100%; background-color: #fff;}
+#howto_use .greenSwiper .swiper-wrapper {width: 100%; height: 100%;}
+#howto_use .greenSwiper .swiper-wrapper .swiper-slide {width: 100%; height: 100%;}
+
+/*pagenation*/
+#page_wrap {width: 1080px; height: 100vh; margin: 0 auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 100;}
+#page_wrap .pagenation {width: auto; height: 62px; position: fixed; top: 50%; left: 451px; transform: translate(0, -50%);}
+#page_wrap .pagenation ul {height: 100%; display: flex;}
+#page_wrap .pagenation ul li {width: 102px; height: 100%; background: url(../images/btn_section04.png) no-repeat 0 0;}
+#page_wrap .pagenation ul .page1 {background-position: 0 0;}
+#page_wrap .pagenation ul .page2 {background-position: -102px 0;}
+#page_wrap .pagenation ul .page3 {background-position: -204px 0;}
+#page_wrap .pagenation ul .page4 {background-position: -306px 0;}
+#page_wrap .pagenation ul .page5 {background-position: -408px 0;}
+#page_wrap .pagenation ul .page1.active {background-position: 0 -72px;}
+#page_wrap .pagenation ul .page2.active {background-position: -102px -72px;}
+#page_wrap .pagenation ul .page3.active {background-position: -204px -72px;}
+#page_wrap .pagenation ul .page4.active {background-position: -306px -72px;}
+#page_wrap .pagenation ul .page5.active{background-position: -408px -72px;}
+
+
+
+.swiper-slide {width: 100%; min-width: 1080px; height: 100vh;}
+.swiper-slide.step1 { background: url(../images/bg_section0401.jpeg) no-repeat 0 0; background-size: cover; background-position: center;}
+.swiper-slide.step2 { background: url(../images/bg_section0402.jpeg) no-repeat 0 0; background-size: cover; background-position: center;}
+.swiper-slide.step3 { background: url(../images/bg_section0403.jpeg) no-repeat 0 0; background-size: cover; background-position: center;}
+.swiper-slide.step4 { background: url(../images/bg_section0404.jpeg) no-repeat 0 0; background-size: cover; background-position: center;}
+.swiper-slide.step5 { background: url(../images/bg_section0405.jpeg) no-repeat 0 0; background-size: cover; background-position: center;}
 
 
 
 
 
 
+.swiper-slide .wrap_box {width: 1080px; height: 100%; margin: 0 auto; padding: 0; display: flex; justify-content: space-between; align-items: center;}
+.swiper-slide .wrap_box .text_box {width: 100%; height: 634px; margin-left: 40px; display: flex; flex-direction: column; padding: 100px 0 30px; gap: 140px;}
+.swiper-slide .wrap_box .text_box .top {width: 100%;}
+.swiper-slide .wrap_box .text_box .top p {font-size: 2.5rem; line-height: 4rem; font-weight: 500;}
+.swiper-slide .wrap_box .text_box .top h3 {font-size: 3.5rem; line-height: 5rem; font-weight: 500;}
+.swiper-slide .wrap_box .text_box .bottom {width: 100%;}
+.swiper-slide .wrap_box .text_box .bottom p {font-size: 1.5rem; line-height: 2.3rem; color: #000;}
+
+.swiper-slide .wrap_box .phone_wrap { width: auto; height: 643px; position: relative;}
+.swiper-slide .wrap_box .phone_wrap .phone {width: 411px; height: 634px; background: url(../images/bg_phone.png) no-repeat 0 0;}
+.swiper-slide .wrap_box .phone_wrap .inner_img {width: 283px; height: 486px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+
+.swiper-slide.step1 .wrap_box .phone_wrap .inner_img {background: url(../images/img_section0401.gif) no-repeat 0 0;}
+.swiper-slide.step2 .wrap_box .phone_wrap .inner_img {background: url(../images/img_section0402.gif) no-repeat 0 0;}
+.swiper-slide.step3 .wrap_box .phone_wrap .inner_img {background: url(../images/img_section0403.gif) no-repeat 0 0;}
+.swiper-slide.step4 .wrap_box .phone_wrap .inner_img {background: url(../images/img_section0404.gif) no-repeat 0 0;}
+.swiper-slide.step5 .wrap_box .phone_wrap .inner_img {background: url(../images/img_section0405.gif) no-repeat 0 0;}
+
+
+
+
+
+#howto_use .greenSwiper .swiper-wrapper .swiper-slide.red {background-color: #f00;}
+#howto_use .greenSwiper .swiper-wrapper .swiper-slide.blue {background-color: #00f;}
 
 
 

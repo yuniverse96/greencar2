@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <link rel="stylesheet" type="text/css" href="../css/jquery.fullpage.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="../js/common.js"></script>
     <script type="text/javascript" src="../js/jquery.fullpage.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   
  
     <title>그린카 클론</title>
@@ -214,7 +216,128 @@
 
                 </div>
             </div>
-            <div class="section">그린카 이용안내</div>
+            <!--그린카 이용안내-->
+            <div id="howto_use" class="section">
+                <div class="greenSwiper">
+                     <!--pagenation-->
+                    <div id="page_wrap">
+                        <div class="pagenation">
+                            <ul>
+                                <li class="page1 active"></li>
+                                <li class="page2"></li>
+                                <li class="page3"></li>
+                                <li class="page4"></li>
+                                <li class="page5"></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                        <!--step1-->
+                        <div class="swiper-slide step1">
+                            <div class="wrap_box">
+                                <div class="phone_wrap">
+                                    <div class="phone"></div>
+                                    <div class="inner_img"></div>
+                                </div>
+                                <div class="text_box">
+                                    <div class="top">
+                                        <p>그린카 이용안내</p>
+                                        <h3>STEP1. 그린카 예약</h3>
+                                    </div>
+                                    <div class="bottom">
+                                        <p>그린카 이용시간과 대여, 반납할 위치를 선택한 후</p>
+                                        <p>차량을 예약합니다</p>
+                                    </div> 
+                                    </div>
+                            </div>
+                        </div>
+                       <!--step2-->
+                       <div class="swiper-slide step2">
+                            <div class="wrap_box">
+                                <div class="phone_wrap">
+                                    <div class="phone"></div>
+                                    <div class="inner_img"></div>
+                                </div>
+                                <div class="text_box">
+                                    <div class="top">
+                                        <p>그린카 이용안내</p>
+                                        <h3>STEP2. 그린카 찾기</h3>
+                                    </div>
+                                    <div class="bottom">
+                                        <p>그린존에 도착하면 그린카 앱 스마트 키의 경적아이콘을 터치해</p>
+                                        <p>차량위치를 확인합니다.</p>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--step3-->
+                        <div class="swiper-slide step3">
+                            <div class="wrap_box">
+                                <div class="phone_wrap">
+                                    <div class="phone"></div>
+                                    <div class="inner_img"></div>
+                                </div>
+                                <div class="text_box">
+                                    <div class="top">
+                                        <p>그린카 이용안내</p>
+                                        <h3>STEP3. 차량 상태 확인</h3>
+                                    </div>
+                                    <div class="bottom">
+                                        <p>차량에 파손된 부위가 없는지 확인합니다.</p>
+                                        <p>파손된 부위가 있다면 스마트폰으로 사진을 찍어</p>
+                                        <p>그린카로 전송합니다.</p>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                       <!--step4-->
+                        <div class="swiper-slide step4">
+                            <div class="wrap_box">
+                                <div class="phone_wrap">
+                                    <div class="phone"></div>
+                                    <div class="inner_img"></div>
+                                </div>
+                                <div class="text_box">
+                                    <div class="top">
+                                        <p>그린카 이용안내</p>
+                                        <h3>STEP4. 차량 도어 제어</h3>
+                                    </div>
+                                    <div class="bottom">
+                                        <p>그린카 앱을 스마트 키를 활용해 차량문을 열고</p>
+                                        <p>탑승한 후 운행을 시작합니다.</p>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                       <!--step5-->
+                       <div class="swiper-slide step5">
+                            <div class="wrap_box">
+                                <div class="phone_wrap">
+                                    <div class="phone"></div>
+                                    <div class="inner_img"></div>
+                                </div>
+                                <div class="text_box">
+                                    <div class="top">
+                                        <p>그린카 이용안내</p>
+                                        <h3>STEP5. 그린카 반납</h3>
+                                    </div>
+                                    <div class="bottom">
+                                        <p>차량 이용을 마치면 지정된 장소에 주차 후</p>
+                                        <p>그린카 앱 스마트키의 반납 버튼을 터치하여</p>
+                                        <p>차량반납을 요청합니다.</p>
+                                    </div> 
+                                </div>
+                            </div>
+                      </div>
+                    </div>
+                </div>
+
+            </div>
             <div class="section test">이벤트</div>
             <div class="section test">공지사항</div>
         </div>
