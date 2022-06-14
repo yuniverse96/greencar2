@@ -361,7 +361,7 @@
 
 #info_list {width: 100%; }
 #info_list ul {width: 100%; display: flex; justify-content: space-between; flex-wrap: wrap; }
-#info_list ul li {width: 300px; overflow: hidden; opacity:1; transition: 0.3s ease-in; margin-bottom: 40px; }
+#info_list ul li {width: 300px; overflow: hidden; opacity:0; transition: 0.3s ease-in; margin-bottom: 40px; }
 #info_list ul li.active {opacity: 1;}
 #info_list ul li .title {width: 100%; display: flex; justify-content: space-between;}
 #info_list ul li .title .icon { padding: 0 10px; background-color: #00be5a; border-radius: 2px; color: #fff; font-size: 1rem; line-height: 1.6rem;}

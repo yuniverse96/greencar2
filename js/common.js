@@ -108,6 +108,25 @@ $(document).ready(function() {
 
 			}
 
+			//공지사항 페이지 목록 이벤트
+			if(index == 7){
+				var item = document.querySelectorAll('#info_list ul li');
+				var cnt = 0; 
+
+				function activeFunc(){
+					item[cnt].classList.add('active');
+					cnt++;    
+					if(cnt >= item.length){
+						clearInterval(addActive);
+					}
+				}
+				var addActive = setInterval(activeFunc, 30);
+
+			}else{
+				$("#info_list ul li").removeClass("active");
+
+			}
+
 		},
 		'onLeave' : function (index, nextIndex, direction){
 			
@@ -166,11 +185,6 @@ $(document).ready(function() {
 	});
 
 	//공지사항 글자수에 따라 제거
-	// var txt = $("#info_list ul li > h3").text();
-	// var overTxt = txt.substring(0, 30);
-	// console.log(overTxt);
-
-	// $("#info_list ul li > h3").text(overTxt + "...")
 
 	$('#info_list ul').find('li > h3').each(function(i,e){
 		var allTxt = $(this).text();
