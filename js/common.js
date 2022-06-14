@@ -165,6 +165,24 @@ $(document).ready(function() {
 		$("#header .nav .menu .tabs > ul .tab_box").removeClass("on");
 	});
 
+	//공지사항 글자수에 따라 제거
+	// var txt = $("#info_list ul li > h3").text();
+	// var overTxt = txt.substring(0, 30);
+	// console.log(overTxt);
+
+	// $("#info_list ul li > h3").text(overTxt + "...")
+
+	$('#info_list ul').find('li > h3').each(function(i,e){
+		var allTxt = $(this).text();
+		var txtLth =allTxt.length;
+		if (txtLth > 30){
+			var splitTxt = allTxt.substring(0, 30);
+			var newTxt = splitTxt + "..."
+			$(this).text(newTxt);
+		}
+
+    });
+
 
 	
 

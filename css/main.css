@@ -188,11 +188,11 @@
 
 
 #fullpage .section h2 { display: none;}
-#fullpage .section { background-attachment: fixed !important;}
+#fullpage .section {background-attachment: fixed !important;}
 
 /*가까운 그린존*/
 #green_zoon {width: 100%; min-width: 1080px; height: 100vh; background: url(../images/bg_section01.jpeg) no-repeat 0 0; background-size: cover; background-position: center;}
-#green_zoon .wrap_box {width: 1080px; height: 100%; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;}
+#green_zoon .wrap_box {width: 1080px; height: 100%; margin: 0 auto; padding-top: 80px; display: flex; justify-content: space-between; align-items: center;}
 #green_zoon .wrap_box .text_box {width: 100%; height: 634px;; margin-left: 40px; display: flex; flex-direction: column; padding: 30px 0; gap: 40px;}
 #green_zoon .wrap_box .text_box .top {width: 100%; height: 50%;}
 #green_zoon .wrap_box .text_box .top .top_icon {width: 47px; height: 60px; background: url(../images/sp_main.png) no-repeat; background-position: 0 -174px; margin-bottom: 20px;} 
@@ -208,7 +208,7 @@
 
 /*경제적인 요금쿠폰*/
 #coupone {width: 100%; min-width: 1080px; height: 100vh; background: url(../images/bg_section02.jpeg) no-repeat 0 0; background-size: cover; background-position: center;}
-#coupone .wrap_box {width: 1080px; height: 100%; margin: 0 auto; padding: 0; display: flex; justify-content: space-between; align-items: center;}
+#coupone .wrap_box {width: 1080px; height: 100%; margin: 0 auto; padding-top: 80px; display: flex; justify-content: space-between; align-items: center;}
 #coupone .wrap_box .text_box {width: 100%; height: 634px; margin-left: 40px; display: flex; flex-direction: column; padding: 30px 0; gap: 40px;}
 #coupone .wrap_box .text_box .top {width: 100%; height: 50%;}
 #coupone .wrap_box .text_box .top .top_icon {width: 50px; height: 60px; background: url(../images/sp_main.png) no-repeat; background-position: -56px -174px; margin-bottom: 20px;} 
@@ -236,7 +236,7 @@
 
 /*간편한 앱*/
 #easy_app {width: 100%; min-width: 1080px; height: 100vh; background: url(../images/bg_section03.jpeg) no-repeat 0 0; background-size: cover; background-position: center;}
-#easy_app .wrap_box {width: 1080px; height: 100%; margin: 0 auto; padding: 0; display: flex; justify-content: space-between; align-items: center;}
+#easy_app .wrap_box {width: 1080px; height: 100%; margin: 0 auto; padding-top: 80px; display: flex; justify-content: space-between; align-items: center;}
 #easy_app .wrap_box .text_box{width: 100%; height: 634px; margin-left: 40px; display: flex; flex-direction: column; padding: 30px 0; gap: 40px;}
 #easy_app .wrap_box .text_box .top {width: 100%; height: 50%;}
 #easy_app .wrap_box .text_box .top .top_icon {width: 39px; height: 64px; background: url(../images/sp_main.png) no-repeat; background-position: -116px -174px; margin-bottom: 20px;} 
@@ -269,7 +269,7 @@
 #howto_use {width: 100%; min-width: 1080px; height: 100vh;}
 #howto_use .greenSwiper {width: 100%; height: 100%; background-color: #fff;}
 #howto_use .greenSwiper .swiper-wrapper {width: 100%; height: 100%;}
-#howto_use .greenSwiper .swiper-wrapper .swiper-slide {width: 100%; height: 100%;}
+#howto_use .greenSwiper .swiper-wrapper .swiper-slide {width: 100%; height: 100%; padding-top: 80px;}
 
 /*pagenation*/
 #page_wrap {width: 1080px; height: 100vh; margin: 0 auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 100;}
@@ -332,12 +332,15 @@
 #event .wrap_box .top p.right {text-align: right; font-size: 1rem; line-height: 1rem; cursor: pointer;}
 #event .wrap_box .top p span {width: 6px; height: 10px; display: inline-block; background:url(../images/sp_main.png) no-repeat -201px 0; margin-left: 4px;}
 
-#event_list {width: 100%;}
-#event_list ul {width: 100%; display: flex; justify-content: space-between;}
+#event_list {width: 100%; }
+#event_list ul {width: 100%; display: flex; justify-content: space-between; flex-wrap: wrap; }
 #event_list ul li {width: 300px; overflow: hidden; opacity:0; transition: 0.3s ease-in; }
 #event_list ul li.active {opacity: 1;}
 #event_list ul li .img_box {width: 100%; height: 204px; position: relative;}
-#event_list ul li .img_box img {width: 100%; height: 180px; position: absolute; bottom: 0; left: 0; overflow: hidden;}
+#event_list ul li .img_box .img {width: 100%; height: 180px; position: absolute; bottom: 0; left: 0; overflow: hidden;}
+#event_list ul li .img_box .img > img {width: 100%; height: auto; object-fit: cover; transition: 0.2s ease-in;}
+#event_list ul li .img_box .img:hover > img { transform: scale(1.1);}
+
 #event_list ul li .img_box .day {width: 48px; height: 48px; border: 2px solid #6104cc; background-color: #fff; box-sizing: border-box; border-radius: 100px; overflow: hidden; z-index: 100; position: absolute; top: 0; right: 10px;}
 #event_list ul li .img_box .day p {width: 100%; height: 100%; color: #6104cc; font-weight: bold; font-size: 0.8rem; line-height: 48px; text-align: center;}
 
@@ -352,8 +355,19 @@
 #info .wrap_box {width: 1080px; height: 100%; margin: 0 auto; padding: 80px 40px;}
 #info .wrap_box .top {width: 100%; padding: 40px 0;}
 #info .wrap_box .top h3 {font-size: 3rem; line-height: 4.5rem; font-weight: 500;}
-#info .wrap_box .top p {font-size: 1.3rem; line-height: 3rem;}
-#info .wrap_box .top p.right {text-align: right; font-size: 1rem; line-height: 1rem; cursor: pointer;}
-#info .wrap_box .top p span {width: 6px; height: 10px; display: inline-block; background:url(../images/sp_main.png) no-repeat -201px 0; margin-left: 4px;}
+#info .wrap_box .top > p {font-size: 1.3rem; line-height: 3rem;}
+#info .wrap_box .top > p.right {text-align: right; font-size: 1rem; line-height: 1rem; cursor: pointer;}
+#info .wrap_box .top > p span {width: 6px; height: 10px; display: inline-block; background:url(../images/sp_main.png) no-repeat -201px 0; margin-left: 4px;}
 
-  
+#info_list {width: 100%; }
+#info_list ul {width: 100%; display: flex; justify-content: space-between; flex-wrap: wrap; }
+#info_list ul li {width: 300px; overflow: hidden; opacity:1; transition: 0.3s ease-in; margin-bottom: 40px; }
+#info_list ul li.active {opacity: 1;}
+#info_list ul li .title {width: 100%; display: flex; justify-content: space-between;}
+#info_list ul li .title .icon { padding: 0 10px; background-color: #00be5a; border-radius: 2px; color: #fff; font-size: 1rem; line-height: 1.6rem;}
+#info_list ul li .title .new {padding: 0 10px; border: 2px solid #6104cc; border-radius: 30px; color: #6104cc; font-size: 0.8rem; line-height: 1.6rem; font-weight: bold; }
+#info_list ul li > h3 {width: 100%; margin: 15px 0; font-size: 1.2rem; line-height: 1.4rem; font-weight: 500;}
+#info_list ul li .date {color: #767676; margin-top: 10px;}
+#info_list ul li .btn_next {width: 34px; height: 34px; margin-top: 30px; overflow: hidden;}
+#info_list ul li .btn_next > button {width: 100%; height: 100%; background: url(../images/sp_main.png) no-repeat -165px -174px;}
+
