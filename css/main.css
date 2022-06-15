@@ -16,7 +16,7 @@
 #header .nav .menu {height: 100%;}
 #header .nav .menu .tabs {height: 100%;}
 #header .nav .menu .tabs > ul {height: 100%; display: flex; flex-wrap: nowrap; justify-content: space-between; }
-#header .nav .menu .tabs > ul .tab_box {height: 100%; padding: 0 40px;}
+#header .nav .menu .tabs > ul .tab_box {height: 100%; padding: 0 40px; cursor: pointer;}
 #header .nav .menu .tabs > ul .tab_box > a {font-size: 1.1rem; font-weight: 500; line-height: 80px; height: 80px;}
 #header .nav .lojo {height: 80px; display: flex; align-items: center; gap: 2px;}
 

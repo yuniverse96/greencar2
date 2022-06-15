@@ -88,6 +88,12 @@ $(document).ready(function() {
 				$("#header").removeClass("white");
 			};
 
+			//그린카 이용안내 페이지 이벤트
+			if(index == 5){
+				swiper.slideTo(1);
+
+
+			}
 		
 			//이벤트 페이지 목록 이벤트
 			if(index == 6){
@@ -156,7 +162,7 @@ $(document).ready(function() {
 		  },
 		  on: {
 			  slideChange: function () {
-				  //console.log(this.realIndex);
+				 
 				  $("#page_wrap .pagenation ul li").removeClass("active");
 				  $('#page_wrap .pagenation ul li').eq(this.realIndex).addClass("active")
 			  }
